@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia Visual - Demonstração Passo a Passo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Criptografia Visual</h1>
+            <p>Aprenda como funcionam os símbolos de criptografia passo a passo</p>
+        </header>
+
+        <main>
+            <!-- Seção de Entrada -->
+            <section class="input-section">
+                <div class="card">
+                    <h2>Passo 1: Digite sua Senha</h2>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="passwordInput" 
+                            placeholder="Digite sua senha aqui..."
+                            class="password-input"
+                        >
+                        <button id="togglePassword" class="toggle-btn" title="Mostrar/Ocultar">👁️</button>
+                    </div>
+                    <div class="character-count">
+                        <span id="charCount">0</span> caracteres
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Demonstração -->
+            <section class="demo-section">
+                <!-- Mapeamento de Caracteres -->
+                <div class="card">
+                    <h2>Passo 2: Mapeamento de Caracteres</h2>
+                    <p class="subtitle">Cada caractere é mapeado para um símbolo único</p>
+                    <div id="mappingDisplay" class="mapping-display"></div>
+                </div>
+
+                <!-- Processo de Criptografia -->
+                <div class="card">
+                    <h2>Passo 3: Processo de Criptografia</h2>
+                    <p class="subtitle">Transformação em tempo real</p>
+                    <div id="encryptionProcess" class="process-display"></div>
+                </div>
+
+                <!-- Resultado Criptografado -->
+                <div class="card highlight">
+                    <h2>Resultado Criptografado</h2>
+                    <div class="result-box">
+                        <div id="encryptedResult" class="encrypted-text">Sua senha criptografada aparecerá aqui...</div>
+                        <button id="copyEncrypted" class="copy-btn" title="Copiar">📋 Copiar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Descriptografia -->
+            <section class="decryption-section">
+                <div class="divider">⬇️ DESCRIPTOGRAFIA ⬇️</div>
+                
+                <div class="card">
+                    <h2>Passo 4: Insira o Texto Criptografado</h2>
+                    <div class="input-group">
+                        <textarea 
+                            id="encryptedInput" 
+                            placeholder="Cole o texto criptografado aqui..."
+                            class="encrypted-input"
+                            rows="4"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- Processo de Descriptografia -->
+                <div class="card">
+                    <h2>Passo 5: Processo de Descriptografia</h2>
+                    <p class="subtitle">Revertendo os símbolos para caracteres</p>
+                    <div id="decryptionProcess" class="process-display"></div>
+                </div>
+
+                <!-- Resultado Descriptografado -->
+                <div class="card highlight">
+                    <h2>Senha Original Recuperada</h2>
+                    <div class="result-box">
+                        <div id="decryptedResult" class="decrypted-text">Sua senha descriptografada aparecerá aqui...</div>
+                        <button id="copyDecrypted" class="copy-btn" title="Copiar">📋 Copiar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Informações Educativas -->
+            <section class="info-section">
+                <div class="card info-card">
+                    <h2>ℹ️ Como Funciona?</h2>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <h3>Cifra de Substituição</h3>
+                            <p>Este exemplo usa uma cifra de substituição simples onde cada caractere é substituído por um símbolo único e consistente.</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Chave de Criptografia</h3>
+                            <p>A chave é gerada automaticamente e mantém a correspondência entre caracteres e símbolos. A mesma chave é usada para criptografar e descriptografar.</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Segurança</h3>
+                            <p>⚠️ Este é apenas um demonstrativo educativo. A criptografia real para dados sensíveis requer algoritmos muito mais complexos como AES, RSA, etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🎓 Projeto educativo - Aprenda sobre criptografia de forma interativa</p>
+        </footer>
+    </div>
+
+    <script src="cipher.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
